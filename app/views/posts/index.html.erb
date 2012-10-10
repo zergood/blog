@@ -1,0 +1,16 @@
+
+  <% @posts.each do |post| %>
+    <h2 class="dom-heading"><%=link_to post.title, post_path(post) %></h2>
+    <div class="dom-body-text">
+      <p><%= post.excerpt %></p>
+    </div>
+    <table>
+      <tr>
+        <td><%= button_to 'Edit', edit_post_path(post), :class=> "flat-ok-button",:method=>"get",:width => "100" %></td>
+        <td><%= button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"flat-cancel-button" %></td`>
+    </tr>
+    </table>
+  <% end %>
+<br />
+
+<%= button_to 'New Post', new_post_path, :class => "new-button", :method =>"get"  %>
