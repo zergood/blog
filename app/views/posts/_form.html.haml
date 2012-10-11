@@ -1,5 +1,5 @@
 .form
-  .new_form
+  .new-form
     = form_for(@post) do |f|
       - if @post.errors.any?
         #error_explanation
@@ -9,11 +9,11 @@
           -@post.errors.full_messages.each do |msg|
             %li
               =msg
-      #new_form_title
-        =f.text_field :title, :class=>"textinput-title", :value => "Заголовок..."
-      #new_form_excerpt
-        =f.text_area :excerpt, :id => "new_form_exerpt", :value => "Выдержка..."
-      #new_form_body  
-        =f.text_area :body, :class => "textarea-body", :value => "Статья..."
+      #new-form-title
+        =f.text_field :title, :class=>"textinput-title"
+      #new-form-excerpt
+        =f.text_area :excerpt, :class => "new_form_exerpt", :rows => 4, :cols => 50
+      #new-form-body  
+        =f.text_area :body, :class => "textarea-body", :cols => 50
       #new_form_submit
-        =f.submit "Создать", :class => "basic-ok-button-create-post"
+        =f.submit "Создать", :class => "flat-ok-button"

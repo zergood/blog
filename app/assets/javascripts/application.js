@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require h5bp
+//= require lettering
+//= require arctext
+//= require_tree
 

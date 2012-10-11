@@ -1,6 +1,9 @@
 %header#header
   .header-rectangle
     .header-text Zergood
-    .header-links
-      =link_to "Обо мне", "#",:id => "header_link_about"
-      =link_to "Блог", root_path, :id => "header_link_blog"
+    #header-links
+      %ul
+        %li
+          =link_to "Обо мне", "#",:id => "header_link_about"
+        %li
+          =link_to "Блог", root_path, :id => "header_link_blog"

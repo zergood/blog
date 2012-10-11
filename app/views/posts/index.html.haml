@@ -1,15 +1,16 @@
 -@posts.each do |post|
-  .main-heading
+  .main-heading-text
     %h2
       =link_to post.title, post_path(post)
-    .main-text
-      %p
-        =post.excerpt
-    %table
-      %tr
-        %td 
-          =button_to 'Edit', edit_post_path(post), :class=> "flat-ok-button",:method=>"get", :class => "flat-ok-button"
-        %td
-          =button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"flat-cancel-button"
+  .main-text
+    %p
+      =post.excerpt
+    .admin-buttons
+      %table 
+        %tr
+          %td 
+            =button_to 'Edit', edit_post_path(post), :class=> "flat-ok-button",:method=>"get", :class => "flat-ok-button"
+          %td
+            =button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"flat-cancel-button"
 
 =button_to 'New Post', new_post_path, :class => "basic-button", :method =>"get"

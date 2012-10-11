@@ -23,7 +23,6 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'
-gem 'formtastic'
 gem 'haml-rails' # Optional - to generate haml
 gem 'html5-rails'
 # To use ActiveModel has_secure_password

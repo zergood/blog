@@ -9,22 +9,27 @@
 html, body {
   margin: 0px;
   padding: 0px;
-  background-color: #ffffff;
+ 
+}
+.posts {
+ background-image:url("bg.jpg");
 }
 .page-wrapper {
-  position: relative;
   width: 60em;
   margin: 0 auto;
   overflow: hidden;
   height: 75em;
   @include single-box-shadow;
+  background-color: #f1f3f5;
 }
 .header-rectangle {
   background: #262a30;
   @include single-box-shadow;
   border: none;
-  width: 978px;
-  height: 58px;
+  width: 100%;
+  height: 30%;
+  display: block;
+  padding: 2px 0px 60px 0px;
 }
 .header-text {
   color: #ffffff;
@@ -36,17 +41,33 @@ html, body {
   margin: 10px 0 0 2em;
   position: absolute;
 }
-.header-links a{
-  color: #ffffff;
+.group:after{
+  display: block;
+  clear: both;
+  content: ".";
+  visibility: hidden;
+}
+#header-links{
+  margin: -9px 10px;
+  float: right;
+  width: 100%;
+}
+#header-links ul {
   font-family:"helvetica";
   font-size: 15pt;
   font-weight: 300;
-  text-align: right;
+  text-align: left;
   text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.46);
-  float: right;
-  padding: 12px 40px 0 0;
+  list-style: none outside none;
+ 
 }
-
+#header-links ul li{
+  float: right;
+  width: 10%;
+}
+#header-links ul li a{
+  color: #ffffff;
+}
 .main-rectangle {
   width: 980px;
   margin: 0 auto;
@@ -55,9 +76,14 @@ html, body {
   margin: 0 0 0 3em ;
   
 }
+.main-heading-text{
+  margin: 0;
+}
+.main-heading-text h2{
+}
+
 .main-text{
   width: 550px;
-  height: 135px;
   overflow: hidden;
 }
 .main-text p {
@@ -71,34 +97,35 @@ html, body {
   background: none repeat scroll 0% 0% transparent;
   color: rgb(51, 51, 51);
   word-wrap:break-word;
+  background-color: #ffffff;
+  @include border-radius(5px);
+  padding-left: 5px;
+  border: 1px solid #dfe1e3;
+  display: block;
+  margin: 0 0 10px 0; 
 }
-#new_form_excerpt {
-  width: 337px;
-  height: 88px;
-  padding: 5px 8px;
-  font-size: 12pt;
-  font-family:"Helvetica Neue";
-  color: rgb(51, 51, 51);
-  background: none repeat scroll 0% 0% rgb(255, 255, 255);
-  border: 1px solid rgb(207, 207, 207);
-  border-radius: 3px;
-  -moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
-  -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
-  -o-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
-  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
-  font-weight: 400;
-  text-decoration: none;
-  text-align: left;
+.admin-buttons{
+  float: right;
+  display: block;
+  margin: 0 0 10px 0; 
+
 }
+.new-form, #new-form-excerpt, #new-form-body  {
+  margin: 10px 0 10px 0px;
+  width: 600;
+}
+.new-comment-form {
+}
+
+
 .footer-rectangle {
   background: #3b424b;
   @include background-image(linear-gradient(top, #3b424b, #343a42));
   border: 1px solid #4d5662;
-  width: 984px;
-  height: 119px;
-  bottom: 0;
+  width: 100%;
+  height: 20%;
   clear: both;
-  position: absolute;
+  display: block;
 }
 .flat-ok-button {
   width: 100px;
@@ -138,4 +165,16 @@ html, body {
   border: 1px solid rgb(0, 84, 163);
   text-decoration: none;
   margin: auto;
+}
+.comment-button {
+  background: #4453ad;
+  border: 1px solid #151e33;
+  border-radius: 25px;
+  -moz-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -webkit-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  -o-box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  box-shadow: inset 0px 0px 30px 0px #6f8bb5, 0px 8px 0px 0px #1f3053, 0px 10px 5px 0px #000000;
+  width: 98px;
+  height: 38px;
+  margin: 10px;
 }
