@@ -1,0 +1,22 @@
+#notice
+  %p
+    = notice
+.post_title
+%b
+  = @post.title
+.post-body
+  = @post.body
+.comments
+  -@post.comments.each do |comment|
+    .comment
+      = render "comment", :comment => comment
+.new_comment_form
+  %strong Comments: 
+  -if user_signed_in? 
+    = form_for [@post, @post.comments.new], :remote => true do |f|
+      #new_comment_form_body
+        = f.text_area :body
+      #new_comment_form_submit
+        = f.submit 
+= link_to 'Edit', edit_post_path(@post)
+= link_to 'Back', posts_path

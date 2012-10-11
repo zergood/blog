@@ -1,0 +1,19 @@
+.form
+  .new_form
+    = form_for(@post) do |f|
+      - if @post.errors.any?
+        #error_explanation
+          %h2
+            =pluralize(@post.errors.count, "error") 
+        %ul
+          -@post.errors.full_messages.each do |msg|
+            %li
+              =msg
+      #new_form_title
+        =f.text_field :title, :class=>"textinput-title", :value => "Заголовок..."
+      #new_form_excerpt
+        =f.text_area :excerpt, :class => "textarea-excert", :value => "Выдержка..."
+      #new_form_body  
+        =f.text_area :body, :class => "textarea-body", :value => "Статья..."
+      #new_form_submit
+        =f.submit "Создать", :class => "basic-ok-button-create-post"

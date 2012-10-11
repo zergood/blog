@@ -1,0 +1,15 @@
+-@posts.each do |post|
+  .dom-heading
+    %h2
+      =link_to post.title, post_path(post)
+    .dom-body-text
+      %p
+        =post.excerpt
+    %table
+      %tr
+        %td 
+          =button_to 'Edit', edit_post_path(post), :class=> "flat-ok-button",:method=>"get",:width => "100"
+        %td
+          =button_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"flat-cancel-button"
+
+=button_to 'New Post', new_post_path, :class => "new-button", :method =>"get"
