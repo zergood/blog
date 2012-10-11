@@ -13,9 +13,129 @@ html, body {
 }
 .page-wrapper {
   position: relative;
+  width: 60em;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 75em;
+  @include single-box-shadow;
+}
+.header-rectangle {
+  background: #262a30;
+  @include single-box-shadow;
+  border: none;
+  width: 978px;
+  height: 58px;
+}
+.header-text {
+  color: #ffffff;
+  font-family:"lobster";
+  font-size: 18pt;
+  font-weight: normal;
+  text-align: left;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+  margin: 10px 0 0 2em;
+  position: absolute;
+}
+.header-links a{
+  color: #ffffff;
+  font-family:"helvetica";
+  font-size: 15pt;
+  font-weight: 300;
+  text-align: right;
+  text-shadow: 0px 1px 3px rgba(255, 255, 255, 0.46);
+  float: right;
+  padding: 12px 40px 0 0;
+}
+
+.main-rectangle {
   width: 980px;
   margin: 0 auto;
   overflow: hidden;
   height: 1000px;
-  @include single-box-shadow;
+  margin: 0 0 0 3em ;
+  
+}
+.main-text{
+  width: 550px;
+  height: 135px;
+  overflow: hidden;
+}
+.main-text p {
+  font-family:"Arial";
+  line-height: 1.5;
+  font-size: 12pt;
+  border: medium none;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: left;
+  background: none repeat scroll 0% 0% transparent;
+  color: rgb(51, 51, 51);
+  word-wrap:break-word;
+}
+#new_form_excerpt {
+  width: 337px;
+  height: 88px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:"Helvetica Neue";
+  color: rgb(51, 51, 51);
+  background: none repeat scroll 0% 0% rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 3px;
+  -moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
+  -webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
+  -o-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.098) inset;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: left;
+}
+.footer-rectangle {
+  background: #3b424b;
+  @include background-image(linear-gradient(top, #3b424b, #343a42));
+  border: 1px solid #4d5662;
+  width: 984px;
+  height: 119px;
+  bottom: 0;
+  clear: both;
+  position: absolute;
+}
+.flat-ok-button {
+  width: 100px;
+  height: 28px;
+  border-radius: 14px;
+  color: rgb(255, 255, 255);
+  font-family:"Helvetica Neue";
+  font-size: 10pt;
+  font-weight: 400;
+  background: none repeat scroll 0% 0% rgb(255, 86, 25);
+  border: medium none;
+  text-decoration: none;
+  margin: auto;
+}
+.flat-cancel-button {
+  width: 100px;
+  height: 28px;
+  border-radius: 14px;
+  color: rgb(102, 102, 102);
+  font-family:"Helvetica Neue";
+  font-size: 10pt;
+  font-weight: 400;
+  background: none repeat scroll 0% 0% rgb(235, 235, 235);
+  border: medium none;
+  text-decoration: none;
+  margin: auto;
+ }
+ .basic-button {
+  width: 150px;
+  height: 38px;
+  background: -moz-linear-gradient(center top, rgb(61, 136, 204) 0%, rgb(3, 81, 153) 100%) repeat scroll 0% 0% rgb(61, 136, 204);
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-family:"Helvetica Neue";
+  font-size: 12pt;
+  font-weight: 700;
+  border: 1px solid rgb(0, 84, 163);
+  text-decoration: none;
+  margin: auto;
 }
